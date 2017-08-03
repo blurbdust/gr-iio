@@ -44,7 +44,8 @@ sed -i 's/gnuradio\/iio/iio/g' swig/*
 sed -i 's/gnuradio\/iio/iio/g' include/iio/*
 sed -i 's/gnuradio\/iio/iio/g' lib/*
 sed -i 's/gnuradio\/iio/iio/g' python/iio/*
-sed -i 's/from\ gnuradio\ import\ iio/import\ iio/g' grc/*
+sed -i 's/from\ gnuradio\ import\ iio/import\ iio/g' grc/iio_pluto_sink.xml
+sed -i 's/from\ gnuradio\ import\ iio/import\ iio/g' grc/iio_pluto_source.xml
 mkdir build
 cd build
 cmake ..
