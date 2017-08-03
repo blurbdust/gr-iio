@@ -37,6 +37,13 @@ But still no luck. Different error libgnuradio-iio.so not being found. Instead o
 ```
 git clone https://github.com/analogdevicesinc/gr-iio.git
 cd gr-iio
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+cd ..
+rm -r build
 mv include/gnuradio/iio include/iio
 rm -r include/gnuradio
 sed -i 's/gnuradio\/iio/iio/g' CMakeLists.txt
@@ -53,4 +60,4 @@ make
 sudo make install
 ````
 
-Then I was able to get my PlutoSDR working in GNURadio. One benefit to doing it this is the ablility to install only this block from source and not GNURadio itself as with pyBOMBS so it'd be possible to use a prebuilt GNURadio like on a RPi. Or if you are like me and have a lot of issues with pyBOMBS.
+Then I was able to get my PlutoSDR working in GNURadio. This is a terrible way of doing it. And I will look into an actual fix instead of a bandaid. One benefit to doing it this is the ablility to install only this block from source and not GNURadio itself as with pyBOMBS so it'd be possible to use a prebuilt GNURadio like on a RPi. Or if you are like me and have a lot of issues with pyBOMBS.
