@@ -1,4 +1,9 @@
 # gr-iio
+
+# See https://wiki.analog.com/resources/tools-software/linux-software/gnuradio for updated instructions
+Keeping below solely because I want to.
+
+
 IIO blocks for GNU Radio
 First and foremost, let's list dependencies because someone thought listing dependencies was too hard.
 
